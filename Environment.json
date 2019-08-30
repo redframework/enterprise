@@ -1,0 +1,61 @@
+{
+  "PROJECT": {
+    "Name": "RedFramework",
+    "State": "Production",
+    "Version": "1.0",
+    "SDK": "Red Framework Enterprise Application",
+    "SupervisorIP": "192.168.0.1",
+    "Language": "en",
+    "Programmer": "RedCoder",
+    "Encryption": "off",
+    "SecretKey": "RedCoder_FrameWorK762",
+    "Timezone": "Asia/Tehran",
+    "Cache": "off"
+  },
+  "DEBUG": {
+    "Errors": "on",
+    "DebugBar": "on"
+  },
+  "DATABASE_1": {
+    "Status": "off",
+    "Driver": "mysql",
+    "Host": "localhost",
+    "Port": "3306",
+    "Name": "red",
+    "User": "root",
+    "Password": "red",
+    "Charset": "utf8",
+    "Backup": "off",
+    "BackupTime": "23",
+    "Migration": "off"
+  },
+  "DATABASE_2": {
+    "Status": "off",
+    "Driver": "sqlsrv",
+    "Host": "localhost",
+    "Port": "3306",
+    "Name": "red",
+    "User": "root",
+    "Password": "red",
+    "Charset": "utf8",
+    "Backup": "off",
+    "BackupTime": "23",
+    "Migration": "off"
+  },
+  "DATABASE_3": {
+    "Status": "off",
+    "Driver": "sqlite",
+    "Name": "red",
+    "Charset": "utf8",
+    "Backup": "off",
+    "BackupTime": "23",
+    "Migration": "off"
+  },
+  "MAIL_SERVER": {
+    "Status": "off",
+    "Username": "red@localhost",
+    "Port": "2456",
+    "Host": "smtp.localhost",
+    "Password": "red"
+  }
+}

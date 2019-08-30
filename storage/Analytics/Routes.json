@@ -1,0 +1,1 @@
+{"error\/403\/":{"action":{},"method":["get","post","put","patch","delete"],"middlewares":"All"},"new-captcha\/":{"action":{},"method":["get"],"middlewares":["AJAXRequest"]}}

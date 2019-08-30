@@ -1,0 +1,14 @@
+{
+  "Product": {
+    "Name": "Red Framework",
+    "Website": "http://redframework.ir",
+    "Developer": "RedCoder",
+    "Contact": "mzero651@gmail.com",
+    "Version" : "1.0",
+    "State": "Release"
+  },
+
+  "Requirements": {
+    "PHP": "^7.1.3"
+  }
+}

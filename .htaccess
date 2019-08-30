@@ -1,0 +1,24 @@
+#You Should Define your Domain
+ErrorDocument 403 http://localhost/error/403
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+
+RewriteEngine On
+
+# Stop Processing If Already In The /public Directory
+RewriteRule ^public/ - [L]
+
+# Static Resources If They Exist
+RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
+RewriteRule (.+) public/$1 [L]
+
+# Route All Other Requests
+RewriteRule ^([\s\S]*)$ public/index.php?url=$1 [L,QSA]
+
+
+</IfModule>
+
