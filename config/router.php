@@ -3,19 +3,19 @@
 use Red\RouterService\Router;
 
 
-/*
-|--------------------------------------------------------------------------
-| Default Route
-|--------------------------------------------------------------------------
-|
-| Default Route will Be Used when No Route Exist
-| You Should Set this On your Not Found View.
-|
-*/
+    /*
+    |--------------------------------------------------------------------------
+    | Default Route
+    |--------------------------------------------------------------------------
+    |
+    | Default Route will Be Used when No Route Exist
+    | You Should Set this On your Not Found View.
+    |
+    */
 
     Router::setDefaultRoute(function () {
         http_response_code('404');
-        \Red\View\View::render("Red.NotFoundError");
+        \Red\View\View::render("@Router/NotFoundError");
     });
 
 
@@ -29,7 +29,7 @@ use Red\RouterService\Router;
     |
     */
 
-    Router::setDefaultNoAccess('Red.AccessError');
+    Router::setDefaultNoAccess('@Router/AccessError');
 
 
     /*
@@ -45,7 +45,7 @@ use Red\RouterService\Router;
 
     Router::register('error/403', 'GET,POST,PUT,PATCH,DELETE', function (){
         http_response_code('403');
-        \Red\View\View::render("Red.AccessError");
+        \Red\View\View::render("@Router/AccessError");
     }, 'All');
 
 
