@@ -62,7 +62,7 @@ class Bootstrap
         } else if ($project_state == "break" && $_SERVER['REMOTE_ADDR'] != Environment::get('PROJECT', 'SupervisorIP')) {
             Environment::set("DEBUG", "Errors", "off");
             Environment::set("DEBUG", "DebugBar", "off");
-            View::render("Red.MaintenanceBreak");
+            View::render("@Router/MaintenanceBreak");
             exit();
         }
 
