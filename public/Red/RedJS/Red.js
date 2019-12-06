@@ -9,10 +9,10 @@
  #     # ####### ######   #####  ####### ######  ####### #     #
 
  RedJS
- Version 1.0
+ Version 1.01
  License : MIT
  Coded By RedCoder
- http://redframework.org
+ http://redframework.ir
 
  */
 
@@ -173,6 +173,7 @@ var Red = {
 
 
                                     var model_data = model_element.getAttribute('red-model');
+
                                     if (model_element.value === 'undefined') {
                                         Red.app.modules[module]['models'][model]['data']['model_' + model_data] = model_element.innerHTML;
 
@@ -196,6 +197,7 @@ var Red = {
 
                         });
                 } else {
+
                     if (app_element.getAttribute('red-controller') === model) {
                         Array.prototype.slice.call(app_element.querySelectorAll('[red-model]'))
                             .map(function (model_element) {
@@ -203,12 +205,14 @@ var Red = {
 
                                 var model_data = model_element.getAttribute('red-model');
 
+
                                 Red.app.modelBinder(module, model, model_element);
 
                                 if (model_element.value === 'undefined') {
+
                                     Red.app.modules[module]['models'][model]['data']['model_' + model_data] = model_element.innerHTML;
 
-                                    Array.prototype.slice.call(element.querySelectorAll('[red-bind="model_' + model_data + '"]'))
+                                    Array.prototype.slice.call(app_element.querySelectorAll('[red-bind="model_' + model_data + '"]'))
                                         .map(function (feeder_element) {
                                             Red.app.modules[module]['models'][model]['feeder_elements'].push(feeder_element);
                                         });
@@ -216,14 +220,16 @@ var Red = {
                                 } else {
                                     Red.app.modules[module]['models'][model]['data']['model_' + model_data] = model_element.value;
 
-                                    Array.prototype.slice.call(model_element.querySelectorAll('[red-bind="model_' + model_data + '"]'))
+                                    Array.prototype.slice.call(app_element.querySelectorAll('[red-bind="model_' + model_data + '"]'))
                                         .map(function (feeder_element) {
                                             Red.app.modules[module]['models'][model]['feeder_elements'].push(feeder_element);
                                         });
                                 }
                             });
                     }
+
                 }
+
 
 
             },
@@ -1310,9 +1316,13 @@ var Red = {
             Object.keys(validateServiceRules).forEach(function (key) {
                 if (method == validateServiceRules[key]['rule']) {
                     var callback_func = validateServiceRules[key]['callback'];
-                    return callback_func(attributes_in_array[0], min, max, string);
+                    result = callback_func(attributes_in_array[0], min, max, string);
                 }
             });
+
+            if (result === true || result === false) {
+                return result;
+            }
 
             if (attributes_in_array[0] === 'required') {
 
@@ -1643,14 +1653,15 @@ var Red = {
 
             }
 
-
             var filterServiceRules = this.filterServiceRules;
             Object.keys(filterServiceRules).forEach(function (key) {
                 if (method == filterServiceRules[key]['rule']) {
                     var callback_func = filterServiceRules[key]['callback'];
-                    return callback_func(string);
+                    string = callback_func(string);
                 }
             });
+
+            return string;
         },
 
         addFilterRule: function (rule, callback) {
@@ -1668,9 +1679,11 @@ var Red = {
             Object.keys(sanitizeServiceRules).forEach(function (key) {
                 if (method == sanitizeServiceRules[key]['rule']) {
                     var callback_func = sanitizeServiceRules[key]['callback'];
-                    return callback_func(string);
+                    string = callback_func(string);
                 }
             });
+
+            return string;
         },
 
         addSanitizeRule: function (rule, callback) {
