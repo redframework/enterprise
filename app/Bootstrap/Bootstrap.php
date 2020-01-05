@@ -166,6 +166,9 @@ class Bootstrap
 
     public static function getExecutionTime()
     {
+        self::$execution_time = (microtime(true) - self::$start_time) * 1000;
+        self::$execution_time = substr(self::$execution_time, 0, strpos(self::$execution_time, ".") + 3);
+
         return self::$execution_time;
     }
 
