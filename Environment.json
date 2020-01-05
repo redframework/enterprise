@@ -2,7 +2,7 @@
   "PROJECT": {
     "Name": "RedFramework",
     "State": "Production",
-    "Version": "1.0",
+    "Version": "1.0.1",
     "SDK": "Red Framework Enterprise Application",
     "SupervisorIP": "192.168.0.1",
     "Language": "en",
