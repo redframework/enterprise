@@ -1,5 +1,5 @@
-<p align="center"><a href="http://redframework.org" target="_blank">
-    <img src="http://www.upsara.com/images/y589258_Red_Framework_Logo.png">
+<p align="center"><a href="http://redframework.ir" target="_blank">
+    <img src="http://redframework.ir/public/Red/Images/Red_Framework_Logo_For_Header.png">
 </a></p>
 
 [Red Framework Enterprise Kit][1] is a Modern **PHP MVC Framework** For Enterprise Web Applications Merged with **Special Tools and Components** to Speed up and Organize Development .
@@ -25,4 +25,4 @@ Red Framework development is Done with <3 By RedCoder (M.Azizkhani)
 [1]: http://redframework.ir
 [2]: http://redframework.ir/projects/red-analytics
 [3]: https://packagist.org/packages/redframework/enterprise
-[4]: http://redframework.ir/document/red-framework-enterprise
+[4]: http://redframework.ir/documentation/en/enterprise/master/document.html
