@@ -11,7 +11,7 @@
   "license": "MIT",
   "require": {
     "php": "^7.1.3",
-    "redframework/enterprise-core": "1.01",
+    "redframework/enterprise-core": "1.0.1",
     "twig/twig": "2.11.3",
     "pear/mail": "*",
     "pear/net_smtp": "*"
