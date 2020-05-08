@@ -1,5 +1,5 @@
 <p align="center"><a href="http://redframework.ir" target="_blank">
-    <img src="https://development.guardiran.org/Images/redframework/red_framework_logo.png">
+    <img src="http://redframework.ir/public/Red/Images/Red_Framework_Logo_For_Header.png">
 </a></p>
 
 [Red Framework Enterprise Kit][1] is a Modern **PHP MVC Framework** For Enterprise Web Applications Merged with **Special Tools and Components** to Speed up and Organize Development .
