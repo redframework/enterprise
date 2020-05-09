@@ -68,7 +68,7 @@ if (in_array($file_name, $directory_scan)){
 }
 
 
-echo "\e[1;37;40m" . PHP_EOL;
+echo "\e[1;37;40m";
 
 
 $handler = fopen("php://stdin", "r");
