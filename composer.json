@@ -24,9 +24,8 @@
     }
   },
   "scripts": {
-    "analytics_downloader": [
-      "@php AnalyticsDownloader.php",
-      "phpunit"
-    ]
+    "post-create-project-cmd": [
+      "php AnalyticsDownloader.php"
+	  ]
   }
 }
